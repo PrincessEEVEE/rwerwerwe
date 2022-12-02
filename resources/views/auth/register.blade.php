@@ -59,7 +59,7 @@
                             <div class="col-md-6">
                                 <input id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" required autocomplete="login" autofocus>
 
-                                @error('name')
+                                @error('login')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
