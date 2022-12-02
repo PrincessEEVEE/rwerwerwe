@@ -4,7 +4,7 @@
 use Illuminate\Support\Facades\Route;
 
   
- Route::get('test/show',  [App\Http\Controllers\link::class,'show']); 
+Route::get('test/show',  [App\Http\Controllers\link::class,'show']); 
 
 Route::get('test/show2',  [App\Http\Controllers\cycle::class,'show2']); 
 
@@ -28,3 +28,7 @@ Route::get('/test/acc',  [App\Http\Controllers\redirect::class,'good']);
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
