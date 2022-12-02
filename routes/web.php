@@ -3,9 +3,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-
-
-
   
  Route::get('test/show',  [App\Http\Controllers\link::class,'show']); 
 
