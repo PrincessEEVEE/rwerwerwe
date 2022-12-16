@@ -83,9 +83,27 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
+        <main>
+            <div class="catalog-name">
+            НАШ КАТАЛОГ
+            </div>
+            @foreach($prod as $elem)
+        <div class="card" style="width: 18rem;">
+        
+  <img class="card-img-top" src="{{$elem->photo}}" alt="Card image cap">
+
+  <div class="card-body">
+    <h5 class="card-title">{{$elem->name}}</h5>
+
+    <p class="card-text">Цена: {{$elem->price}}</p>
+
+    <a href="describe/{{$elem->id}}" class="btn btn-primary">Подробнее</a>
+
+  </div>
+</div>
+@endforeach
+
+
+
+
         </main>
-    </div>
-</body>
-</html>

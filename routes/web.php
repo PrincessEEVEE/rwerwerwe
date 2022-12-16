@@ -32,3 +32,7 @@ Route::get('/test/acc',  [App\Http\Controllers\redirect::class,'good']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/catalog', [App\Http\Controllers\HomeController::class, 'base']);
+Route::get('/describe/{id}', [App\Http\Controllers\HomeController::class, 'desc']);
+
+

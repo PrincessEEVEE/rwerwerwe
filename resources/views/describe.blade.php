@@ -1,6 +1,10 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Описание товара</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +25,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+<div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
 
@@ -83,9 +87,16 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+        <div class="describe-img">
+            <img src="{{$prod->photo}}" alt="">
+        </div>
+
+        <div class="desc-txt">
+            <h1>{{$prod->name}}</h1>
+            <p>Цена: {{$prod->price}}</p>
+            <p>Издатель: {{$prod->publisher}}</p>
+            <p>Год выпуска: {{$prod->year}}</p>
+            <p>Антагонист: {{$prod->antagonist}}</p>
+        </div>
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\prod;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,5 +25,22 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function catalog()
+    {
+        return view('catalog');
+    }
+
+    public function base()
+    {
+        $prod = prod::all();
+        return view('catalog', ['prod'=>$prod]);
+    }
+
+    public function desc($id)
+    {
+        $prod = prod::find($id);
+        return view('describe', ['prod'=>$prod]);
     }
 }
